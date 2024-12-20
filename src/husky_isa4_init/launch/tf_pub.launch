@@ -1,0 +1,11 @@
+<launch>
+    <node name="tf_husky2ousterlidar" pkg="husky_isa4_init" type="tf2_static_lidar" output="screen" required="true">
+    </node>
+
+    <!-- <node name="tf_husky2cam1r" pkg="husky_isa4_init" type="tf2_kams_cam1r" output="screen" required="true"> -->
+    <!-- </node> -->
+
+    <node name="tf_lidar2cam" pkg="husky_isa4_init" type="tf2_lidar_cam" output="screen" required="true">
+    </node>
+
+</launch>

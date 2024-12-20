@@ -1,0 +1,17 @@
+<launch>
+
+<!-- RGB cam -->
+  <include file="$(find spinnaker_sdk_camera_driver)/launch/single.launch" />
+
+<!-- TF publisher -->
+  <include file="$(find husky_isa4_init)/launch/tf_pub.launch" />
+
+
+<!-- Lidar Ouster -->
+  <include file="$(find ouster_ros)/launch/ouster.launch" />
+
+<!-- pc to laser -->
+  <include file="$(find husky_isa4_nav)/launch/lidar_pointcloud_to_laserscan.launch" />
+
+
+</launch>
